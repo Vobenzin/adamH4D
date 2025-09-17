@@ -1,0 +1,26 @@
+﻿@using adamH4D.Models
+@{
+}
+
+@model List<UserInfo>
+
+!DOCTYPE html>
+
+<html>
+<head>
+    <title>Uloha 1</title>
+
+</head>
+<div class="text-center">
+
+    @foreach (var user in Model)
+    {
+        <h1 class="display-4">Vítajte v Úlohe @user.Name</h1>
+        <p>Tato stranka je jednoducha sa vlastnym stylom.</p>
+
+        <a class="btn-primary" href="/">Spat na home</a>
+    }
+
+
+</div>
+</html>

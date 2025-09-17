@@ -1,0 +1,19 @@
+﻿@using adamH4D.Models
+@{
+}
+
+@model List<UserInfo>
+
+
+<html>
+<head>
+    <title>Uloha 5</title>
+    <link rel="stylesheet" href="~/css/ulohy/uloha5.css">
+</head>
+<div class="text-center uloha5-container">
+    @foreach (var user in Model)
+    {
+        <partial name="_UserCard" model="user" />
+    }
+</div>
+</html>

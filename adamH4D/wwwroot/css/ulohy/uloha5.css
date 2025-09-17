@@ -1,0 +1,38 @@
+.uloha5-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 16px
+}
+
+.uloha5 {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #bababa;
+    padding: 16px;
+    border-radius: 20px;
+}
+
+.uloha5-left {
+    width: 80px;
+    height: 80px;
+    border-radius: 9999px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.uloha5-left img {
+    width: 100%;
+}
+
+.uloha5-right {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}

@@ -1,0 +1,23 @@
+﻿@{
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Uloha 3</title>
+    <link rel="stylesheet" href="~/css/ulohy/uloha3.css">
+</head>
+<div class="text-center">
+    <div class="karta-grid">
+        @for (var i = 0; i < 6; i++)
+        {
+            <div class="karta-grid-item">
+                <div class="karta-grid-item-image"><img src="~/images/profile.jpg" /></div>
+                <h1>Ján Novák @i</h1>
+                <p>designer</p>
+            </div>
+        }
+    </div>
+</div>
+</html>
