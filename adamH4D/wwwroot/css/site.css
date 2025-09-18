@@ -123,3 +123,22 @@ body {
     .uloha4-content div:hover {
         background-color: #dfdfdf;
     }
+
+.bad {
+    outline: 1px solid black;
+}
+
+.ok{
+    outline: 1px solid lime;
+}
+
+.divik{
+    border-block-color: black;
+    border: 2px solid black
+}
+.divBum {
+    border-block-color: black;
+    border: 2px solid black;
+    fill:aqua;
+    background-color:aqua;
+}

@@ -109,4 +109,23 @@ public class Ulohy : Controller
         };
         return View(userList);
     }
+
+    public IActionResult uloha6()
+    {
+        return View();
+    }
+
+    public IActionResult uloha7()
+    {
+        return View();
+    }
+    public IActionResult uloha8()
+    {
+        return View();
+    }
+
+    public IActionResult uloha9()
+    {
+        return View();
+    }
 }
