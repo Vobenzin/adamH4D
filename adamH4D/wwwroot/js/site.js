@@ -29,28 +29,55 @@
 //};
 
 //Uloha 9
-const osoba = JSON.parse('{ "meno":"Adam", "priezvisko":"Hric", "vek":20 }');
-console.log(osoba.meno, osoba.priezvisko, osoba.vek);
+//const osoba = JSON.parse('{ "meno":"Adam", "priezvisko":"Hric", "vek":20 }');
+//console.log(osoba.meno, osoba.priezvisko, osoba.vek);
 
-var produktyJSON = '[{"nazov": "Notebook", "cena":899},{"nazov": "Mys", "cena":25},{"nazov": "Klavesnica", "cena":50}]'
-const produkty = JSON.parse(produktyJSON);
-console.log(produkty[0].nazov, produkty[0].cena);
+//var produktyJSON = '[{"nazov": "Notebook", "cena":899},{"nazov": "Mys", "cena":25},{"nazov": "Klavesnica", "cena":50}]'
+//const produkty = JSON.parse(produktyJSON);
+//console.log(produkty[0].nazov, produkty[0].cena);
 
-var janoveFilmyJSON = '{"meno":"Jan","oblubeneFilmy":["Matrix","Inception","Interstellar"]}'
-const jan = JSON.parse(janoveFilmyJSON);
-console.log(`Pouzivatel:${jan.meno}\nOblubene filmy:\n ${jan.oblubeneFilmy[0]}\n ${jan.oblubeneFilmy[1]}\n ${jan.oblubeneFilmy[2]}`);
+//var janoveFilmyJSON = '{"meno":"Jan","oblubeneFilmy":["Matrix","Inception","Interstellar"]}'
+//const jan = JSON.parse(janoveFilmyJSON);
+//console.log(`Pouzivatel:${jan.meno}\nOblubene filmy:\n ${jan.oblubeneFilmy[0]}\n ${jan.oblubeneFilmy[1]}\n ${jan.oblubeneFilmy[2]}`);
 
-var teamJSON = '[{"meno":"Jan", "pozicia":"Manazer"},{"meno":"Marta","pozicia":"Programator"},{"meno":"Milos","pozicia":"Programator"}]'
-const team = JSON.parse(teamJSON);
-team.filter(member => member.pozicia === "Programator")
-    .forEach(programator => console.log(`Programator: ${programator.meno}`));
+//var teamJSON = '[{"meno":"Jan", "pozicia":"Manazer"},{"meno":"Marta","pozicia":"Programator"},{"meno":"Milos","pozicia":"Programator"}]'
+//const team = JSON.parse(teamJSON);
+//team.filter(member => member.pozicia === "Programator")
+//    .forEach(programator => console.log(`Programator: ${programator.meno}`));
 
-var knihy = '{"knihy":[{"nazov":"Kniha1","autor":"Autor1"},{"nazov":"Kniha2","autor":"Autor2"},{"nazov":"Kniha3","autor":"Autor3"}]}'
-const knihyObj = JSON.parse(knihy);
-knihyObj.knihy.forEach(kniha => {
-    var row = document.getElementById("table1").insertRow(document.getElementById("table1"));
-    row.insertCell(0).innerHTML = kniha.nazov;
-    row.insertCell(1).innerHTML = kniha.autor; }
+//var knihy = '{"knihy":[{"nazov":"Kniha1","autor":"Autor1"},{"nazov":"Kniha2","autor":"Autor2"},{"nazov":"Kniha3","autor":"Autor3"}]}'
+//const knihyObj = JSON.parse(knihy);
+//knihyObj.knihy.forEach(kniha => {
+//    var row = document.getElementById("table1").insertRow(document.getElementById("table1"));
+//    row.insertCell(0).innerHTML = kniha.nazov;
+//    row.insertCell(1).innerHTML = kniha.autor; }
 
-);
+//);
+
+//fetch('https://jsonplaceholder.typicode.com/users')
+//    .then(response => response.json())
+//    .then(data =>  console.log(data))
+//    .then(error => console.log('Error:', error));
+
+//fetch('https://jsonplaceholder.typicode.com/posts')
+//    .then(response => response.json())
+//    .then(data => { data.forEach(post => { if (post.id == 1) { console.log(` ID ${post.id} TITLE${post.title} BODY${post.body}`) } }) })
+//    .then(error => console.log('Error:', error));
+
+var cb = document.getElementById("catButton")
+if (cb != null) {
+    cb.addEventListener("click", function () {
+        fetch('https://api.thecatapi.com/v1/images/search')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById("catImage").src = data[0].url;
+                //document.getElementById("catImage").style.width = `${data[0].width} px`;
+                //document.getElementById("catImage").style.height = `${ data[0].height} px`;
+                document.getElementById("catImage").style.display = "block ";
+
+            })
+    });
+}
+
+
 
